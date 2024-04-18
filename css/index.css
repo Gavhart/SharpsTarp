@@ -78,6 +78,7 @@ footer {
     text-align: center;
     padding: 10px 0; /* Padding to ensure the footer has some height */
     margin-top: auto; /* Push the footer to the bottom */
+    
 }
 
 .content-wrapper {
@@ -166,6 +167,7 @@ section {
     .location {
         width: 100%;
     }
+    
 
     nav ul {
         flex-direction: column; /* Stack the nav items */
