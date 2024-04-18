@@ -49,4 +49,40 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Display the popup after 30 seconds
+    setTimeout(function() {
+        var popup = document.getElementById("contactPopup");
+        if (popup) popup.style.display = "block";
+        
+        // Display the close button 10 seconds after the popup shows
+        setTimeout(function() {
+            var closeButton = document.querySelector(".close-btn");
+            if (closeButton) closeButton.style.display = "block";
+        }, 8000); 
+    }, 15000); 
+
+    // Close button functionality
+    var closeButton = document.querySelector(".close-btn");
+    if (closeButton) {
+        closeButton.addEventListener('click', function() {
+            var popup = document.getElementById("contactPopup");
+            if (popup) popup.style.display = "none";
+        });
+    }
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('#main-nav a');
+    const currentUrl = window.location.href;
+
+    navLinks.forEach(link => {
+        if (currentUrl.includes(link.getAttribute('href'))) {
+            link.classList.add('active-link');
+        }
+    });
+});
+
+
+
+
 

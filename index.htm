@@ -7,55 +7,61 @@
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <header>
-
-        <div class="header-content">
-            <img src="/images/logo.jpg" alt="logo" class="logo"> 
-            <h1>"We Cover the Trucks That Cover the West"</h1>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="/index.htm">Home</a></li>
-                    <li><a href="/routes/about.html">About</a></li>
-                    <li><a href="/routes/products.html">Products</a></li>
-                    <li><a href="/routes/contact.html">Contact</a></li>
-                    <li><a href="/routes/locations.html">Locations</a></li>
-                </ul>
-            </nav>
-        
-    </header>
-
-    <main>
-        <section id="home">
-            <h2>Welcome to SharpsTarps</h2>
-            <p>Your reliable tarp solution for every need.</p>
-        </section>
-
-        
+    <div class="content-wrapper"> <!-- Wrapping all content except footer -->
+        <header>
+            <div class="header-content">
+                <img src="/images/logo.jpg" alt="logo" class="logo"> 
+                <h1>"We Cover the Trucks That Cover the West"</h1>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="/index.htm">Home</a></li>
+                        <li><a href="/routes/about.html">About</a></li>
+                        <li><a href="/routes/products.html">Products</a></li>
+                        <li><a href="/routes/contact.html">Contact</a></li>
+                        <li><a href="/routes/locations.html">Locations</a></li>
+                    </ul>
+                </nav>
             </div>
-            <p>Pick Up and Delivery offered for a minimal charge</p>
+        </header>
 
-            <h2>Schedule</h2>
-            <p>Our Delivery Vehicle that serves Oregon and Washington leaves Grants Pass before 7:00am every Monday morning, except on holiday weeks.</p>
-            <ul class="schedule">
-                <li>I-5 from Grants Pass Oregon to Seattle Washington - Weekly (Monday, Tuesday) (Tuesday, Wednesday)</li>
-                <li>I-5 from Seattle Washington to Bellingham Washington - Bi-Monthly (Tuesday, Wednesday)</li>
-                <li>Bend, Madras, La Pine Oregon - Bi-Monthly (Thursday)</li>
-                <li>White City, Central Point, Medford Oregon - Weekly (Tuesday, Thursday) Normally Between 12:00 -4:00 pm</li>
-            </ul>
+        <main>
+            <section id="home">
+                <h2>Welcome to SharpsTarps</h2>
+                <p>Your reliable tarp solution for every need.</p>
+            </section>
 
-            <p>Our Delivery Vehicle that serves California leaves before 7:00am every Wednesday morning except on holiday weeks.</p>
-            <ul class="schedule">
-                <li>101 from Crescent City to Santa Rosa California - Weekly (Wednesday)</li>
-                <li>I-5 From Lathrop California to Yreka California - Weekly (Thursday, Friday)</li>
-                <li>Klamath Falls Oregon - Monthly (Fridays)</li>
-            </ul>
-        </section>
-    </main>
+            <div> <!-- Corrected missing div open tag -->
+                <p>Pick Up and Delivery offered for a minimal charge</p>
+
+                <h2>Schedule</h2>
+                <p>Our Delivery Vehicle that serves Oregon and Washington leaves Grants Pass before 7:00am every Monday morning, except on holiday weeks.</p>
+                <ul class="schedule">
+                    <li>I-5 from Grants Pass Oregon to Seattle Washington - Weekly (Monday, Tuesday) (Tuesday, Wednesday)</li>
+                    <li>I-5 from Seattle Washington to Bellingham Washington - Bi-Monthly (Tuesday, Wednesday)</li>
+                    <li>Bend, Madras, La Pine Oregon - Bi-Monthly (Thursday)</li>
+                    <li>White City, Central Point, Medford Oregon - Weekly (Tuesday, Thursday) Normally Between 12:00 -4:00 pm</li>
+                </ul>
+
+                <p>Our Delivery Vehicle that serves California leaves before 7:00am every Wednesday morning except on holiday weeks.</p>
+                <ul class="schedule">
+                    <li>101 from Crescent City to Santa Rosa California - Weekly (Wednesday)</li>
+                    <li>I-5 From Lathrop California to Yreka California - Weekly (Thursday, Friday)</li>
+                    <li>Klamath Falls Oregon - Monthly (Fridays)</li>
+                </ul>
+            </div>
+        </main>
+        <script src="/js/homepage.js"></script>
+    </div>
 
     <footer>
         <p>&copy; 2024 Sharps Tarps All rights reserved.</p>
+        
     </footer>
-
-    <script src="/js/homepage.js"></script>
+    
+    <div id="contactPopup" class="contact-popup" style="display: none;">
+        <span class="close-btn">&times;</span>
+        <p>Need help? <a href="/routes/contact.html">Contact us!</a></p>
+    </div>
+    
 </body>
 </html>
