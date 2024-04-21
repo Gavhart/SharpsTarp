@@ -82,6 +82,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+async function fetchWeather(lat, lon) {
+    const apiKey = 'e8f8498df5f067ba1e99807aa9e9b8dd';
+    const url = `https://home.openweathermap.org/api_keys`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.main.temp + '°C, ' + data.weather[0].description;
+    } catch (error) {
+        console.error('Failed to fetch weather data:', error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async function() {
+    const weatherGP = await fetchWeather(42.4711, -123.3414);
+    document.getElementById('weatherGP').innerText = weatherGP;
+
+    const weatherVW = await fetchWeather(45.6680, -122.5401);
+    document.getElementById('weatherVW').innerText = weatherVW;
+});
+
+
 
 
 

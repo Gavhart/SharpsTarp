@@ -80,6 +80,13 @@ footer {
     margin-top: auto; /* Push the footer to the bottom */
     
 }
+.weather-info {
+    text-align: center;
+    padding: 10px;
+    background-color: #eef;
+    color: #333;
+    font-size: 16px;
+}
 
 .content-wrapper {
     flex: 1; /* This will make the wrapper expand to fill available space, pushing the footer down */
@@ -163,6 +170,12 @@ section {
             width: 350px; /* Smaller size for mobile phones */
         }
     }
+@media screen and (max-width: 350px) {
+    .html {
+        width: 100%;
+    }
+    
+}
 
     .location {
         width: 100%;
