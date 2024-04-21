@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharpsTarps - [Page Name]</title>
+    <title>Contact - SharpsTarps</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/png" href="/images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="/images/logo.jpg" alt="logo" class="logo">
+            <img src="/images/logo.jpg" alt="logo" class="logo"> 
             <h1>We Cover the Trucks That Cover the West</h1>
             <nav id="main-nav">
                 <ul>
-                    <li><a href="/index.htm">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="/routes/about.html">About</a></li>
                     <li><a href="/routes/products.html">Products</a></li>
                     <li><a href="/routes/locations.html">Locations</a></li>
@@ -21,33 +23,36 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div class="content-wrapper">
-            <main>
-                <h2>Contact Us</h2>
-                <div class="locations">
-                    <div class="location">
-                        <h3>Grants Pass Oregon</h3>
-                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=2741+Highland+Avenue+Grants+Pass+Oregon+97526" target="_blank">2741 Highland Avenue<br>Grants Pass, Oregon 97526</a></p>
-                        <p><a href="tel:+1541-476-0832">Call Us: +1 541-476-0832</a></p>
-                        <p><strong>Email:</strong> bg@sharpstarps.com</p>
-                    </div>
-                    <div class="location">
-                        <h3>Vancouver Washington</h3>
-                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=6302+NE+131st+Avenue+Vancouver+Washington+98682" target="_blank">6302 NE 131st Avenue<br>Vancouver, Washington 98682</a></p>
-                        <p><a href="tel:+1360-944-5123">Call Us: +1  360-944-5123</a></p>
-                    </div>
-                </div>
-    </main>
-    <footer>
-        <p>&copy; 2023 Sharps Tarps All rights reserved.</p>
-    </footer>
-    <script src="/js/homepage.js"></script>
-
-    <div id="contactPopup" class="contact-popup" style="display: none;">
-        <span class="close-btn">&times;</span>
-        <p>Need help or directions? <a href="/routes/contact.html">Contact us!</a></p>
+    
+    <div class="weather-info" id="weatherDisplay">
+        <p>Loading weather...</p>
     </div>
+    
+    <main class="content-wrapper">
+        <section id="contact-info">
+            <h2>Contact Us</h2>
+            <div class="locations">
+                <div class="location">
+                    <h3>Grants Pass Oregon</h3>
+                    <p><a href="https://www.google.com/maps/dir/?api=1&destination=2741+Highland+Avenue+Grants+Pass+Oregon+97526" target="_blank">2741 Highland Avenue<br>Grants Pass, Oregon 97526</a></p>
+                    <p><a href="tel:+1541-476-0832">Call Us: +1 541-476-0832</a></p>
+                    <p><strong>Email:</strong> bg@sharpstarps.com</p>
+                </div>
+                <div class="location">
+                    <h3>Vancouver Washington</h3>
+                    <p><a href="https://www.google.com/maps/dir/?api=1&destination=6302+NE+131st+Avenue+Vancouver+Washington+98682" target="_blank">6302 NE 131st Avenue<br>Vancouver, Washington 98682</a></p>
+                    <p><a href="tel:+1360-944-5123">Call Us: +1 360-944-5123</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Sharps Tarps All rights reserved.</p>
+    </footer>
+    
+    <script src="/js/homepage.js"></script>
+    <script src="/js/weather.js"></script>
+    
 </body>
 </html>
-

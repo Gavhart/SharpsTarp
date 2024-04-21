@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharpsTarps - [Page Name]</title>
+    <title>SharpsTarps</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/png" href="/images/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/favicon_io/apple-touch-icon.png">
 </head>
 <body>
     <header>
@@ -13,14 +15,17 @@
             <h1>We Cover the Trucks That Cover the West</h1>
             <nav id="main-nav">
                 <ul>
-                    <li><a href="/index.htm">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="/routes/about.html">About</a></li>
-                    <li><a href="/routes/products.html">Products</a></li>
+                    <li><a href="/routes/products.html" class="active">Products</a></li>
                     <li><a href="/routes/locations.html">Locations</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="weather-info" id="weatherDisplay">
+        <p>Loading weather...</p>
+    </div>
     <main>
         
     </main>
@@ -28,6 +33,7 @@
         <p>&copy; 2023 Sharps Tarps All rights reserved.</p>
     </footer>
     <script src="/js/homepage.js"></script>
+    <script src="/js/weather.js"></script>
 
     <div id="contactPopup" class="contact-popup" style="display: none;">
         <span class="close-btn">&times;</span>

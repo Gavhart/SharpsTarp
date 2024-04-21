@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SharpsTarps</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
 </head>
 <body>
-    <div class="content-wrapper"> <!-- Wrapping all content except footer -->
+    <div class="content-wrapper"> 
         <header>
             <div class="header-content">
                 <img src="/images/logo.jpg" alt="logo" class="logo"> 
-                <h1>"We Cover the Trucks That Cover the West"</h1>
+                <h1>We Cover the Trucks That Cover the West</h1>
                 <nav id="main-nav">
                     <ul>
-                        <li><a href="/index.htm">Home</a></li>
+                        <li><a href="/index.htm"class="active">Home</a></li>
                         <li><a href="/routes/about.html">About</a></li>
                         <li><a href="/routes/products.html">Products</a></li>
                         <li><a href="/routes/locations.html">Locations</a></li>
@@ -22,30 +24,24 @@
                 </nav>
             </div>
         </header>
-            <div class="weather-info" id="weatherDisplay">
-                <p>Loading weather...</p>
-            </div>
-    
+        <div class="weather-info" id="weatherDisplay">
+            <p>Loading weather...</p>
+        </div>
         <main>
             <section id="home">
                 <h2>Welcome to SharpsTarps</h2>
                 <p>Your reliable tarp solution for every need.</p>
             </section>
-
         </main>
         <script src="/js/homepage.js"></script>
         <script src="/js/weather.js"></script>
-
     </div>
-
     <footer>
         <p>&copy; 2024 Sharps Tarps All rights reserved.</p>
     </footer>
-    
     <div id="contactPopup" class="contact-popup" style="display: none;">
         <span class="close-btn">&times;</span>
         <p>Need help or directions? <a href="/routes/contact.html">Contact us!</a></p>
     </div>
-    
 </body>
 </html>

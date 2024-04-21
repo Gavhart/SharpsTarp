@@ -1,19 +1,81 @@
+/* Reset styles */
 html, body {
-    height: 100%; /* Ensuring the full height is used */
     margin: 0;
     padding: 0;
-    display: flex; /* Utilizing flexbox */
-    flex-direction: column; /* Aligning children vertically */
+    height: 100%;
 }
 
+/* Flexbox layout for the body to include a sticky footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
 header {
     background: linear-gradient(to bottom, #ffffff 0%, #001279 75%);
-    color: #fff;
+    color: white;
     padding: 10px 0;
     text-align: center;
-    position: relative; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+/* Content wrapper styles */
+.content-wrapper {
+    flex-grow: 1;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    background-color: #001279;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Navigation styles */
+nav#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav#main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav#main-nav ul li a:hover,
+nav#main-nav ul li a:focus {
+    background-color: #f9f9f9;
+    color: #001279;
+}
+
+/* Weather info styles */
+.weather-info {
+    text-align: center;
+    padding: 10px;
+    background-color: #7BAFD4;
+    color: white;
+    font-size: 18.5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Contact popup styles */
 .contact-popup {
     position: fixed;
     bottom: 20px;
@@ -23,9 +85,11 @@ header {
     background-color: rgb(226, 15, 15);
     border: 1px solid #ccc;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000; /* Make sure it's on top of other content */
+    z-index: 1000;
     color: white;
+    display: none; /* Hidden by default, assuming JavaScript will display it */
 }
+
 .close-btn {
     position: absolute;
     top: 5px;
@@ -34,179 +98,23 @@ header {
     cursor: pointer;
 }
 
-
-
-.contact-info a {
-    display: flex;
-    margin: 10px 0;
-    padding: 8px 12px;
-    background-color: #f8f8f8;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #0056b3; 
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-.contact-info a:hover, .contact-info a:focus {
-    background-color: #b2cde8; 
-    color: #01408e; 
-    text-decoration: none; 
-}
-
-.contact-info {
-    padding: 10px 20px; /* Adds padding around the address links for better spacing */
-    text-align: left; /* Ensures text alignment is consistent */
-}
-
-
-@media screen and (max-width: 600px) {
-    .contact-info {
-        position: static;
-        transform: none;
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        display: block; /* Stack the addresses */
-    }
-}
-footer {
-    width: 100%;
-    background-color: #001279; /* Footer background color */
-    color: white; /* Text color for the footer */
-    text-align: center;
-    padding: 10px 0; /* Padding to ensure the footer has some height */
-    margin-top: auto; /* Push the footer to the bottom */
-    
-}
-.weather-info {
-    text-align: center;
-    padding: 10px;
-    background-color: #eef;
-    color: #333;
-    font-size: 16px;
-}
-
-.content-wrapper {
-    flex: 1; /* This will make the wrapper expand to fill available space, pushing the footer down */
-    display: flex;
-    flex-direction: column; /* Keeping the document flow vertical */
-}
-
-/* Restoring other styling elements */
-
-nav {
-    margin: 0 auto; /* Centering the nav */
-    max-width: 1200px; /* Max width for large screens */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center nav items horizontally */
-    flex-wrap: wrap; /* Allow wrapping for small screens */
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem; /* Padding for larger click area */
-    border-radius: 5px; /* Rounded edges for aesthetic */
-    transition: background-color 0.3s; /* Smooth transition for hover */
-    size: 5px;
-
-}
-
-nav ul li a:hover,
-nav ul li a:focus { /* Focus for keyboard navigation */
-    background-color: #f9f9f9;
-    color: #001279;
-}
-
-section {
-    padding: 20px;
-    margin: 10px 0; /* Adds margin for better spacing between sections */
-}
-
-/* Styles for contact info and schedule section */
-#contact-info {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.locations {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.location {
-    background: #f8f8f8;
-    padding: 15px;
-    border-radius: 4px;
-    width: calc(50% - 10px); /* Adapt width for two columns */
-}
-
-.location h3 {
-    color: #001279;
-}
-
-@media screen and (max-width: 600px) {
-    .locations {
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav#main-nav ul {
         flex-direction: column;
     }
-@media (max-width: 480px) {
-        .logo {
-            width: 350px; /* Smaller size for mobile phones */
-        }
-    }
-@media screen and (max-width: 350px) {
-    .html {
-        width: 100%;
-    }
     
-}
-
-    .location {
-        width: 100%;
-    }
-    
-
-    nav ul {
-        flex-direction: column; /* Stack the nav items */
-        align-items: center; /* Align items for small screens */
-    }
-
-    nav ul li {
+    nav#main-nav ul li {
         margin-bottom: 10px;
     }
+}
 
-    .dropdown-content {
-        position: relative; 
+@media (max-width: 480px) {
+    .header-content img.logo {
+        width: 120px; /* Smaller logo for mobile screens */
     }
 }
-.active-link {
-    color: red;
-}
-
-
-.before-enter {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-out;
-}
-
-.enter {
-    opacity: 1;
-    transform: translateY(0);
+nav#main-nav ul li a.active {
+    color: #001279;
+    background-color: #7BAFD4;
 }

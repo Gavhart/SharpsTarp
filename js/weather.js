@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const apiKeys = {
-        grantsPass: 'e8f8498df5f067ba1e99807aa9e9b8dd',
-        vancouver: 'e8f8498df5f067ba1e99807aa9e9b8dd'   // Replace if using different keys or just one key
-    };
+    const apiKey = 'e8f8498df5f067ba1e99807aa9e9b8dd'; // Ensure this is your actual API key
 
     async function fetchWeather(apiKey, lat, lon) {
-        const url = `https://home.openweathermap.org/api_keys/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
         try {
             const response = await fetch(url);
             const data = await response.json();
-            return `${data.weather[0].description}, ${data.main.temp}°C`;
+            if (data.weather) {
+                // Round the temperature to the nearest whole number
+                const temperature = Math.round(data.main.temp);
+                return `${data.weather[0].description}, ${temperature}°F`;
+            } else {
+                throw new Error('Weather data not available');
+            }
         } catch (error) {
             console.error('Failed to fetch weather data:', error);
             return 'Weather not available';
@@ -18,8 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     async function displayWeather() {
         const weatherElement = document.getElementById('weatherDisplay');
-        const grantsPassWeather = await fetchWeather(apiKeys.grantsPass, 42.4711, -123.3414); // Latitude and Longitude for Grants Pass
-        const vancouverWeather = await fetchWeather(apiKeys.vancouver, 45.6679, -122.5401); // Latitude and Longitude for Vancouver
+        if (!weatherElement) {
+            console.log('Weather display element not found');
+            return;
+        }
+
+        const grantsPassWeather = await fetchWeather(apiKey, 42.4711, -123.3414); // Latitude and Longitude for Grants Pass
+        const vancouverWeather = await fetchWeather(apiKey, 45.6679, -122.5401); // Latitude and Longitude for Vancouver
         
         weatherElement.innerHTML = `<strong>Grants Pass:</strong> ${grantsPassWeather} | <strong>Vancouver:</strong> ${vancouverWeather}`;
     }
