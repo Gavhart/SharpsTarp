@@ -37,8 +37,16 @@
         <script src="/js/weather.js"></script>
     </div>
     <footer>
-        <p>&copy; 2024 Sharps Tarps All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentYear = new Date().getFullYear(); // Get the current year
+            document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
+        });
+    </script>
+    
     <div id="contactPopup" class="contact-popup" style="display: none;">
         <span class="close-btn">&times;</span>
         <p>Need help or directions? <a href="/routes/contact.html">Contact us!</a></p>

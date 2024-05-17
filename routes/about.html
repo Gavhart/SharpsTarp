@@ -30,8 +30,15 @@
         <!-- Page Specific Content -->
     </main>
     <footer>
-        <p>&copy; 2023 Sharps Tarps All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentYear = new Date().getFullYear(); // Get the current year
+            document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
+        });
+    </script>
     <script src="/js/homepage.js"></script>
     <script src="/js/weather.js"></script>
 
