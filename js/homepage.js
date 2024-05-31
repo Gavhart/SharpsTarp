@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
 
-        navLinks.forEach((link) => link.classList.remove('active'));
-        navLinks[index] && navLinks[index].classList.add('active');
+        navLinks.forEach((link) => link.classList.remove('active-link'));
+        navLinks[index] && navLinks[index].classList.add('active-link');
     }
-    
+
     changeLinkState();
     window.addEventListener('scroll', changeLinkState);
 
@@ -47,9 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
         section.classList.add('before-enter');
         observer.observe(section);
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
     // Display the popup after 30 seconds
     setTimeout(function() {
         var popup = document.getElementById("contactPopup");
@@ -70,40 +68,23 @@ document.addEventListener("DOMContentLoaded", function() {
             if (popup) popup.style.display = "none";
         });
     }
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const navLinks = document.querySelectorAll('#main-nav a');
-    const currentUrl = window.location.href;
 
-    navLinks.forEach(link => {
-        if (currentUrl.includes(link.getAttribute('href'))) {
-            link.classList.add('active-link');
+    // Highlight the current page link in the navigation
+    function highlightCurrentPage() {
+        const navLinks = document.querySelectorAll('#main-nav a');
+        const currentPath = window.location.pathname;
+
+        function normalizePath(path) {
+            return path.endsWith('/') ? path.slice(0, -1) : path;
         }
-    });
-});
 
-async function fetchWeather(lat, lon) {
-    const apiKey = 'e8f8498df5f067ba1e99807aa9e9b8dd';
-    const url = `https://home.openweathermap.org/api_keys`;
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        return data.main.temp + '°C, ' + data.weather[0].description;
-    } catch (error) {
-        console.error('Failed to fetch weather data:', error);
+        navLinks.forEach(link => {
+            link.classList.remove('active-link');
+            if (normalizePath(link.getAttribute('href')) === normalizePath(currentPath)) {
+                link.classList.add('active-link');
+            }
+        });
     }
-}
 
-document.addEventListener("DOMContentLoaded", async function() {
-    const weatherGP = await fetchWeather(42.4711, -123.3414);
-    document.getElementById('weatherGP').innerText = weatherGP;
-
-    const weatherVW = await fetchWeather(45.6680, -122.5401);
-    document.getElementById('weatherVW').innerText = weatherVW;
+    highlightCurrentPage();
 });
-
-
-
-
-
-

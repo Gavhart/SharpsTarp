@@ -118,3 +118,133 @@ nav#main-nav ul li a.active {
     color: #001279;
     background-color: #7BAFD4;
 }
+
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Google Font */
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #001279, #0047ab);
+    color: white;
+    padding: 20px 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content img.logo {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
+nav#main-nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#main-nav ul li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav#main-nav ul li a:hover, 
+nav#main-nav ul li a.active {
+    color: #ffdd00;
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    margin: auto;
+    max-width: 960px; /* Centering Main Content */
+}
+
+section#about {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+    border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002244;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Popup Styles */
+.contact-popup {
+    background-color: #dc3545;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    z-index: 10;
+}
+
+.close-btn {
+    float: right;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header-content, nav#main-nav ul {
+        flex-direction: column;
+    }
+
+    nav#main-nav ul li {
+        margin-top: 10px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0047ab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003087;
+}
+

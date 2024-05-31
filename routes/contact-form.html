@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharpsTarps</title>
+    <title>Contact Us - SharpsTarps</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
@@ -16,30 +16,37 @@
                 <h1>We Cover the Trucks That Cover the West</h1>
                 <nav id="main-nav">
                     <ul>
-                        <li><a href="/index.html"class="active">Home</a></li>
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="/routes/about.html">About</a></li>
                         <li><a href="/routes/products.html">Products</a></li>
                         <li><a href="/routes/locations.html">Locations</a></li>
-                        <li><a href="/routes/contact-form.html">Contact Us</a></li>
+                        <li><a href="/routes/contact-form.html" class="active">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <div class="weather-info" id="weatherDisplay">
-            <p>Loading weather...</p>
-        </div>
         <main>
-            <section id="home">
-                <h2>Welcome to SharpsTarps</h2>
-                <p>Your reliable tarp solution for every need.</p>
+            <section id="contact-form">
+                <h2>Contact Us</h2>
+                <form action="/submit-form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
             </section>
         </main>
+        <footer>
+            <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
+        </footer>
         <script src="/js/homepage.js"></script>
-        <script src="/js/weather.js"></script>
     </div>
-    <footer>
-        <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
-    </footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -47,10 +54,5 @@
             document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
         });
     </script>
-    
-    <div id="contactPopup" class="contact-popup" style="display: none;">
-        <span class="close-btn">&times;</span>
-        <p>Need help or directions? <a href="/routes/contact.html">Contact us!</a></p>
-    </div>
 </body>
 </html>
