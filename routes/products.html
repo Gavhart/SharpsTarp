@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharpsTarps</title>
+    <title>Products - SharpsTarps</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/products.css">
     <link rel="icon" type="image/png" href="/images/favicon_io/favicon.ico">
-    <link rel="icon" type="image/png" href="/images/favicon_io/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
 </head>
 <body>
     <header>
@@ -16,12 +17,11 @@
             <nav id="main-nav">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                        <li><a href="/routes/about.html">About</a></li>
-                        <li><a href="/routes/products.html">Products</a></li>
-                        <li><a href="/routes/locations.html">Locations</a></li>
-                        <li><a href="/routes/testimonials.html" class="active">Testimonials</a></li>
-                        <li><a href="/routes/contact-form.html">Contact Us</a></li>
-                        <li><a href="/routes/faq.html" class="active">FAQs</a></li>
+                    <li><a href="/routes/about.html">About</a></li>
+                    <li><a href="/routes/products.html" class="active">Products</a></li>
+                    <li><a href="/routes/locations.html">Locations</a></li>
+                    <li><a href="/routes/contact-form.html">Contact Us</a></li>
+                    <li><a href="/routes/faq.html">FAQs</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,25 +29,40 @@
     <div class="weather-info" id="weatherDisplay">
         <p>Loading weather...</p>
     </div>
-    <main>
-        
+
+    <main class="product-container">
+        <h1>Our Products</h1>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="/images/product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Product 1 description...</p>
+                <p>Call for price</p>
+                <a href="tel:+15414760832" class="button">Call Us: +1 541-476-0832</a>
+            </div>
+            <div class="product-item">
+                <img src="/images/product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Product 2 description...</p>
+                <p>Call for price</p>
+                <a href="tel:+15414760832" class="button">Call Us: +1 541-476-0832</a>
+            </div>
+            <!-- Repeat for other products -->
+        </div>
     </main>
+    
+
     <footer>
         <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
     </footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var currentYear = new Date().getFullYear(); // Get the current year
-            document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
+            document.getElementById('current-year').textContent = new Date().getFullYear(); // Update the footer year dynamically
         });
     </script>
+
     <script src="/js/homepage.js"></script>
     <script src="/js/weather.js"></script>
-
-    <div id="contactPopup" class="contact-popup" style="display: none;">
-        <span class="close-btn">&times;</span>
-        <p>Need help or directions? <a href="/routes/contact.html">Contact us!</a></p>
-    </div>
 </body>
 </html>

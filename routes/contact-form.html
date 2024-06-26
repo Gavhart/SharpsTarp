@@ -3,52 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - SharpsTarps</title>
+    <title>Contact - SharpsTarps</title>
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/favicon_io/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
 </head>
 <body>
-    <div class="content-wrapper"> 
-        <header>
-            <div class="header-content">
-                <img src="/images/logo.webp" alt="logo" class="logo"> 
-                <h1>We Cover the Trucks That Cover the West</h1>
-                <nav id="main-nav">
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/routes/about.html">About</a></li>
-                        <li><a href="/routes/products.html">Products</a></li>
-                        <li><a href="/routes/locations.html">Locations</a></li>
-                        <li><a href="/routes/testimonials.html" class="active">Testimonials</a></li>
-                        <li><a href="/routes/contact-form.html">Contact Us</a></li>
-                        <li><a href="/routes/faq.html" class="active">FAQs</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <section id="contact-form">
-                <h2>Contact Us</h2>
-                <form action="/submit-form.php" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button type="submit">Send</button>
-                </form>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
-        </footer>
-        <script src="/js/homepage.js"></script>
+    <header>
+        <div class="header-content">
+            <img src="/images/logo.webp" alt="logo" class="logo"> 
+            <h1>We Cover the Trucks That Cover the West</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/routes/about.html">About</a></li>
+                    <li><a href="/routes/products.html">Products</a></li>
+                    <li><a href="/routes/locations.html">Locations</a></li>
+                    <li><a href="/routes/testimonials.html">Testimonials</a></li>
+                    <li><a href="/routes/contact-form.html" class="active">Contact Us</a></li>
+                    <li><a href="/routes/faq.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="weather-info" id="weatherDisplay">
+        <p>Loading weather...</p>
     </div>
+    
+    <main class="content-wrapper">
+        <section id="contact-info">
+            <h2>Contact Us</h2>
+            <div class="locations">
+                <div class="location">
+                    <h3>Grants Pass Oregon</h3>
+                    <p><a href="https://www.google.com/maps/dir/?api=1&destination=2741+Highland+Avenue+Grants+Pass+Oregon+97526" target="_blank">2741 Highland Avenue<br>Grants Pass, Oregon 97526</a></p>
+                    <p><a href="tel:+1541-476-0832">Call Us: +1 541-476-0832</a></p>
+                    <p><strong>Email:</strong> bg@sharpstarps.com</p>
+                </div>
+                <div class="location">
+                    <h3>Vancouver Washington</h3>
+                    <p><a href="https://www.google.com/maps/dir/?api=1&destination=6302+NE+131st+Avenue+Vancouver+Washington+98682" target="_blank">6302 NE 131st Avenue<br>Vancouver, Washington 98682</a></p>
+                    <p><a href="tel:+1360-944-5123">Call Us: +1 360-944-5123</a></p>
+                </div>
+            </div>
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h3>Connect with Us on Social Media</h3>
+                <p><a href="https://www.facebook.com/YourFacebookPage" target="_blank">Facebook</a></p>
+                <p><a href="https://www.instagram.com/YourInstagramHandle" target="_blank">Instagram</a></p>
+                <p><a href="https://m.me/YourFacebookPage" target="_blank">Message Us on Facebook Messenger</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
+    </footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -56,5 +67,9 @@
             document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
         });
     </script>
+    
+    <script src="/js/homepage.js"></script>
+    <script src="/js/weather.js"></script>
+    
 </body>
 </html>

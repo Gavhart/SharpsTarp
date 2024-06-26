@@ -3,31 +3,31 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Ensures consistent typography */
+    background-color: #f4f4f4; /* Light gray background for lighter theme */
+    color: #333; /* Darker text for better readability */
+    line-height: 1.6; /* Improved line spacing for readability */
 }
 
 /* Flexbox layout for sticky footer and main content spacing */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Full viewport height */
 }
 
 /* Header styles */
 header {
-    background: linear-gradient(to right, #001279, #0047ab);
+    background: linear-gradient(to right, #001279, #0047ab); /* Gradient blue background */
     color: white;
     padding: 20px 10px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 .header-content img.logo {
-    height: 50px; /* Adjust logo size */
-    width: auto;
+    height: 50px; /* Appropriate logo size */
+    width: auto; /* Maintain aspect ratio */
 }
 
 /* Navigation styles */
@@ -44,42 +44,42 @@ nav#main-nav ul li a {
     padding: 10px 15px;
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Smooth color transition */
 }
 
 nav#main-nav ul li a:hover, 
 nav#main-nav ul li a.active {
-    color: #ffdd00;
-    text-decoration: underline;
+    color: #ffdd00; /* Highlight color for hover and active state */
+    text-decoration: underline; /* Underline for emphasis */
 }
 
 /* Main content styles */
 main {
-    flex-grow: 1;
+    flex-grow: 1; /* Flex-grow to fill available space */
     padding: 20px;
     margin: auto;
-    max-width: 960px;
+    max-width: 960px; /* Max width for content alignment */
 }
 
 /* Footer styles */
 footer {
     width: 100%;
-    background-color: #002244;
+    background-color: #002244; /* Dark blue background */
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 /* Weather and contact popup styles */
 .weather-info, .contact-popup {
     text-align: center;
     padding: 10px;
-    background-color: #7BAFD4;
+    background-color: #7BAFD4; /* Consistent blue theme */
     color: white;
     font-size: 18.5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for depth */
 }
 
 .contact-popup {
@@ -87,7 +87,7 @@ footer {
     bottom: 20px;
     right: 20px;
     width: 300px;
-    background-color: #dc3545;
+    background-color: #dc3545; /* Red color for visibility */
     border-radius: 5px;
     display: none; /* Initially hidden */
 }
@@ -97,7 +97,7 @@ footer {
     top: 5px;
     right: 10px;
     font-size: 20px;
-    color: #fff;
+    color: #fff; /* White text for visibility */
     cursor: pointer;
 }
 
@@ -112,7 +112,7 @@ footer {
     }
 
     .header-content img.logo {
-        width: 120px; /* Smaller logo for mobile screens */
+        width: 120px; /* Adjust logo size for smaller screens */
     }
 }
 
@@ -144,6 +144,41 @@ input[type="text"], input[type="email"], textarea {
 }
 
 button {
+    background-color: #0047ab; /* Button background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003087; /* Darker blue on hover */
+}
+.product-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+button {
     background-color: #0047ab;
     color: white;
     border: none;
@@ -153,4 +188,14 @@ button {
 
 button:hover {
     background-color: #003087;
+}
+a[href^="tel:"] {
+    color: #0047ab; /* Sharps Tarps blue color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Makes it bolder */
+}
+
+a[href^="tel:"]:hover, a[href^="tel:"]:focus {
+    color: #002244; /* Darker blue on hover/focus */
+    text-decoration: underline; /* Adds underline on hover/focus */
 }
