@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharpsTarps - Testimonials</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/png" href="/images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="header-content">
+                <img src="/images/logo.webp" alt="logo" class="logo">
+                <h1>We Cover the Trucks That Cover the West</h1>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/routes/about.html">About</a></li>
+                        <li><a href="/routes/products.html">Products</a></li>
+                        <li><a href="/routes/locations.html">Locations</a></li>
+                        <li><a href="/routes/testimonials.html" class="active">Testimonials</a></li>
+                        <li><a href="/routes/contact-form.html">Contact Us</a></li>
+                        <li><a href="/routes/faq.html" class="active">FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="testimonials">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial">
+                    <blockquote>"Sharp's Tarps provided exceptional service and the quality of the tarps is top-notch. Highly recommend for anyone in need of reliable tarp solutions!"</blockquote>
+                    <cite>– John Doe, Trucking Company Owner</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"We have been using Sharp’s Tarps for years and their products always stand up to the rigors of our daily operations. Great products and even better service."</blockquote>
+                    <cite>– Jane Smith, Operations Manager</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"Their custom tarp solutions were a game-changer for our logistics business. The sales team was incredibly helpful in ensuring we got exactly what we needed."</blockquote>
+                    <cite>– Michael Brown, Logistics Coordinator</cite>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
+        </footer>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var currentYear = new Date().getFullYear(); // Get the current year
+                document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
+            });
+        </script>
+        
+        <script src="/js/homepage.js"></script>
+        <script src="/js/weather.js"></script>
+        
+    </body>
+    </html>

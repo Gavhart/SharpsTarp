@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharpsTarps - FAQs</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/png" href="/images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="header-content">
+                <img src="/images/logo.webp" alt="logo" class="logo">
+                <h1>We Cover the Trucks That Cover the West</h1>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/routes/about.html">About</a></li>
+                        <li><a href="/routes/products.html">Products</a></li>
+                        <li><a href="/routes/locations.html">Locations</a></li>
+                        <li><a href="/routes/testimonials.html" class="active">Testimonials</a></li>
+                        <li><a href="/routes/contact-form.html">Contact Us</a></li>
+                        <li><a href="/routes/faq.html" class="active">FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="faq">
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <div class="faq-section">
+                    <h3>Product Questions</h3>
+                    <p><strong>Q: What types of tarps do you offer?</strong><br>
+                    A: We offer a variety of tarps including flatbed truck tarps, roll tarps, and custom solutions for unique needs.</p>
+
+                    <p><strong>Q: Can I order custom sizes?</strong><br>
+                    A: Yes, we provide custom sizing options to meet specific requirements. Please contact us for more information.</p>
+                </div>
+                <div class="faq-section">
+                    <h3>Shipping and Returns</h3>
+                    <p><strong>Q: How long does shipping take?</strong><br>
+                    A: Shipping times vary by location but typically range from 3-5 business days.</p>
+
+                    <p><strong>Q: What is your return policy?</strong><br>
+                    A: We accept returns within 30 days of purchase, provided the items are in original condition and have not been used.</p>
+                </div>
+                <div class="faq-section">
+                    <h3>Customer Service</h3>
+                    <p><strong>Q: How can I contact customer service?</strong><br>
+                    A: You can reach our customer service team by phone at 541-476-0832 or email us at bg@sharpstarps.com.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
+        </footer>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var currentYear = new Date().getFullYear(); // Get the current year
+                document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
+            });
+        </script>
+        
+        <script src="/js/homepage.js"></script>
+        <script src="/js/weather.js"></script>
+        
+    </body>
+    </html>

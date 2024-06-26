@@ -1,11 +1,15 @@
-/* Reset styles */
+/* Reset and base styles */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Flexbox layout for the body to include a sticky footer */
+/* Flexbox layout for sticky footer and main content spacing */
 body {
     display: flex;
     flex-direction: column;
@@ -14,124 +18,10 @@ body {
 
 /* Header styles */
 header {
-    background: linear-gradient(to bottom, #ffffff 0%, #001279 75%);
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Content wrapper styles */
-.content-wrapper {
-    flex-grow: 1;
-}
-
-/* Main content styles */
-main {
-    padding: 20px;
-}
-
-/* Footer styles */
-footer {
-    width: 100%;
-    background-color: #001279;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
-}
-
-/* Navigation styles */
-nav#main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav#main-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav#main-nav ul li a:hover,
-nav#main-nav ul li a:focus {
-    background-color: #f9f9f9;
-    color: #001279;
-}
-
-/* Weather info styles */
-.weather-info {
-    text-align: center;
-    padding: 10px;
-    background-color: #7BAFD4;
-    color: white;
-    font-size: 18.5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Contact popup styles */
-.contact-popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    padding: 15px;
-    background-color: rgb(226, 15, 15);
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    color: white;
-    display: none; /* Hidden by default, assuming JavaScript will display it */
-}
-
-.close-btn {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    nav#main-nav ul {
-        flex-direction: column;
-    }
-    
-    nav#main-nav ul li {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-content img.logo {
-        width: 120px; /* Smaller logo for mobile screens */
-    }
-}
-nav#main-nav ul li a.active {
-    color: #001279;
-    background-color: #7BAFD4;
-}
-
-/* General Body Styles */
-body {
-    font-family: 'Roboto', sans-serif; /* Google Font */
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header Styles */
-header {
     background: linear-gradient(to right, #001279, #0047ab);
     color: white;
     padding: 20px 10px;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -140,9 +30,11 @@ header {
     width: auto;
 }
 
+/* Navigation styles */
 nav#main-nav ul {
-    padding: 0;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,48 +53,55 @@ nav#main-nav ul li a.active {
     text-decoration: underline;
 }
 
-/* Main Content Styles */
+/* Main content styles */
 main {
+    flex-grow: 1;
     padding: 20px;
     margin: auto;
-    max-width: 960px; /* Centering Main Content */
+    max-width: 960px;
 }
 
-section#about {
-    background: white;
-    padding: 20px;
-    margin: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
-    border-radius: 8px;
-}
-
-/* Footer Styles */
+/* Footer styles */
 footer {
+    width: 100%;
     background-color: #002244;
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto;
 }
 
-/* Popup Styles */
-.contact-popup {
-    background-color: #dc3545;
+/* Weather and contact popup styles */
+.weather-info, .contact-popup {
+    text-align: center;
+    padding: 10px;
+    background-color: #7BAFD4;
     color: white;
-    padding: 15px;
+    font-size: 18.5px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.contact-popup {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none; /* Hidden by default */
-    z-index: 10;
+    width: 300px;
+    background-color: #dc3545;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
 }
 
 .close-btn {
-    float: right;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
     color: #fff;
     cursor: pointer;
 }
 
+/* Responsive adjustments for mobile views */
 @media (max-width: 768px) {
     .header-content, nav#main-nav ul {
         flex-direction: column;
@@ -211,13 +110,23 @@ footer {
     nav#main-nav ul li {
         margin-top: 10px;
     }
+
+    .header-content img.logo {
+        width: 120px; /* Smaller logo for mobile screens */
+    }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+@media (max-width: 600px) {
+    nav#main-nav ul {
+        flex-direction: column;
+    }
+    
+    nav#main-nav ul li {
+        margin-bottom: 10px;
+    }
 }
 
+/* Form styles */
 form {
     max-width: 400px;
     margin: auto;
@@ -228,9 +137,7 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -247,4 +154,3 @@ button {
 button:hover {
     background-color: #003087;
 }
-
