@@ -199,3 +199,66 @@ a[href^="tel:"]:hover, a[href^="tel:"]:focus {
     color: #002244; /* Darker blue on hover/focus */
     text-decoration: underline; /* Adds underline on hover/focus */
 }
+
+#faq h2 {
+    color: #00447c; /* Adjust the color to fit your branding */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.faq-section {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.faq-section h3 {
+    color: #003366;
+}
+
+.faq-section p {
+    color: #333;
+    line-height: 1.6;
+}
+.content-wrapper {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#contact-info h2 {
+    color: #00447c;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 20px;
+}
+
+.location, .social-media {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.location h3, .social-media h3 {
+    color: #003366;
+}
+
+.location a, .social-media a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.location a:hover, .social-media a:hover {
+    text-decoration: underline;
+}
+
+.social-media p {
+    margin: 10px 0;
+}
