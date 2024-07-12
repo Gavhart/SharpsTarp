@@ -13,8 +13,9 @@
         <div class="header-content">
             <img src="/images/logo.webp" alt="logo" class="logo">
             <h1>We Cover the Trucks That Cover the West</h1>
+            <button class="hamburger" id="hamburger">&#9776;</button>
             <nav id="main-nav">
-                <ul>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/routes/about.html">About</a></li>
                     <li><a href="/routes/products.html">Products</a></li>
@@ -23,45 +24,94 @@
                     <li><a href="/routes/contact-form.html">Contact Us</a></li>
                     <li><a href="/routes/faq.html">FAQs</a></li>
                 </ul>
-            </nav>            
+            </nav>
         </div>
+    </header>
     </header>
     <div class="weather-info" id="weatherDisplay">
         <p>Loading weather...</p>
     </div>
     <main>
         <section class="location">
-            <h2>Grants Pass, Oregon</h2>
-            <p>2741 Highland Avenue, Grants Pass, OR 97526</p>
-            <p><strong>Business Hours:</strong> Mon-Fri, 8 AM - 5 PM</p>
-            <p><strong>Parking:</strong> Available onsite, including spaces for large vehicles</p>
-            <!-- Embedded Google Map -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.9602368467176!2d-123.3413539236542!3d42.47113437118276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c57751cf69e4d9%3A0xd609443c0d701b50!2s2741%20Highland%20Ave%2C%20Grants%20Pass%2C%20OR%2097526!5e0!3m2!1sen!2sus!4v1713486099502!5m2!1sen!2sus"></iframe>
-            
-            <h2>Vancouver, Washington</h2>
-            <p>6302 NE 131st Avenue, Vancouver, WA 98682</p>
-            <p><strong>Business Hours:</strong> Mon-Fri, 8 AM - 5 PM</p>
-            <p><strong>Parking:</strong> Street parking available; additional parking in rear</p>
-            <!-- Embedded Google Map -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5576.294072244946!2d-122.54117172349615!3d45.66794847107806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495b011ed6f254b%3A0xb3f48e151dcc64df!2s6302%20NE%20131st%20Ave%2C%20Vancouver%2C%20WA%2098682!5e0!3m2!1sen!2sus!4v1713486129007!5m2!1sen!2sus"></iframe>
+            <div class="location-wrapper">
+                <div class="location-content">
+                    <h2>Grants Pass, Oregon</h2>
+                    <p>2741 Highland Avenue, Grants Pass, OR 97526</p>
+                    <p><strong>Business Hours:</strong> Mon-Fri, 8 AM - 5 PM</p>
+                    <p><strong>Parking:</strong> Available onsite, including spaces for large vehicles</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.9602368467176!2d-123.3413539236542!3d42.47113437118276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c57751cf69e4d9%3A0xd609443c0d701b50!2s2741%20Highland%20Ave%2C%20Grants%20Pass%2C%20OR%2097526!5e0!3m2!1sen!2sus!4v1713486099502!5m2!1sen!2sus"></iframe>
+                    <p class="enlarge-link" onclick="openFullscreenLightbox('/images/Shop Parking-GP.jpg')">Click Here to View Parking Layout</p>
+                </div>
+            </div>
+            <div class="location-wrapper">
+                <div class="location-content">
+                    <h2>Vancouver, Washington</h2>
+                    <p>6302 NE 131st Avenue, Vancouver, WA 98682</p>
+                    <p><strong>Business Hours:</strong> Mon-Fri, 8 AM - 5 PM</p>
+                    <p><strong>Parking:</strong> Street parking available; additional parking in rear</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5576.294072244946!2d-122.54117172349615!3d45.66794847107806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495b011ed6f254b%3A0xb3f48e151dcc64df!2s6302%20NE%20131st%20Ave%2C%20Vancouver%2C%20WA%2098682!5e0!3m2!1sen!2sus!4v1713486129007!5m2!1sen!2sus"></iframe>
+                    <p class="enlarge-link" onclick="openFullscreenLightbox('/images/Parking - Vancouver.jpg')">Click Here to View Parking Layout</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100068241326704" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://www.instagram.com/YourInstagramHandle" target="_blank">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+        </div>
         <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
     </footer>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var currentYear = new Date().getFullYear(); // Get the current year
-            document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
+            var currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
         });
-    </script>
-    <script src="/js/homepage.js"></script>
-    <script src="/js/weather.js"></script>
 
-    <div id="contactPopup" class="contact-popup" style="display: none;">
-        <span class="close-btn">&times;</span>
-        <p>Need help or directions? <a href="/routes/contact.html">Contact us!</a></p>
-    </div>
+        function openFullscreenLightbox(src) {
+            const lightbox = document.createElement('div');
+            lightbox.style.position = 'fixed';
+            lightbox.style.top = '0';
+            lightbox.style.left = '0';
+            lightbox.style.width = '100vw';
+            lightbox.style.height = '100vh';
+            lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            lightbox.style.display = 'flex';
+            lightbox.style.justifyContent = 'center';
+            lightbox.style.alignItems = 'center';
+            lightbox.style.zIndex = '10000';
+            lightbox.style.cursor = 'zoom-out';
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '100%';
+            img.style.margin = 'auto';
+
+            lightbox.appendChild(img);
+            document.body.appendChild(lightbox);
+
+            lightbox.addEventListener('click', () => {
+                lightbox.parentNode.removeChild(lightbox);
+            });
+        }
+    </script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    });
+    </script>
+       <script src="/js/homepage.js"></script>
+       <script src="/js/weather.js"></script>
 </body>
 </html>

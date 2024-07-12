@@ -262,3 +262,100 @@ a[href^="tel:"]:hover, a[href^="tel:"]:focus {
 .social-media p {
     margin: 10px 0;
 }
+
+.location-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location-content {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.location-image {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: white; /* Color for the icons */
+    margin: 0 10px; /* Space between icons */
+    font-size: 24px; /* Icon size */
+}
+
+.social-links a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+    .location-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .location-content {
+        margin: 20px 0;
+    }
+}
+
+.enlarge-link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+}
+/* Hamburger menu button styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Navigation links hidden on mobile by default */
+.nav-links {
+    display: flex;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        background-color: #333;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+

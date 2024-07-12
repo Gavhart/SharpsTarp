@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - SharpsTarps</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/products.css">
+    <title>SharpsTarps</title>
     <link rel="icon" type="image/png" href="/images/favicon_io/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon_io/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <img src="/images/logo.webp" alt="logo" class="logo">
             <h1>We Cover the Trucks That Cover the West</h1>
+            <button class="hamburger" id="hamburger">&#9776;</button>
             <nav id="main-nav">
+                <ul class="nav-links" id="navLinks">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/routes/about.html">About</a></li>
                     <li><a href="/routes/products.html" class="active">Products</a></li>
                     <li><a href="/routes/locations.html">Locations</a></li>
+                    <li><a href="/routes/testimonials.html">Testimonials</a></li>
                     <li><a href="/routes/contact-form.html">Contact Us</a></li>
                     <li><a href="/routes/faq.html">FAQs</a></li>
                 </ul>
@@ -61,6 +63,16 @@
             document.getElementById('current-year').textContent = new Date().getFullYear(); // Update the footer year dynamically
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+         const hamburger = document.getElementById('hamburger');
+         const navLinks = document.getElementById('navLinks');
+ 
+         hamburger.addEventListener('click', function() {
+             navLinks.classList.toggle('active');
+         });
+     });
+     </script>
 
     <script src="/js/homepage.js"></script>
     <script src="/js/weather.js"></script>

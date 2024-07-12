@@ -13,7 +13,9 @@
         <div class="header-content">
             <img src="/images/logo.webp" alt="logo" class="logo">
             <h1>We Cover the Trucks That Cover the West</h1>
+            <button class="hamburger" id="hamburger">&#9776;</button>
             <nav id="main-nav">
+                <ul class="nav-links" id="navLinks">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/routes/about.html">About</a></li>
@@ -56,6 +58,16 @@
                 document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
             });
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+             const hamburger = document.getElementById('hamburger');
+             const navLinks = document.getElementById('navLinks');
+     
+             hamburger.addEventListener('click', function() {
+                 navLinks.classList.toggle('active');
+             });
+         });
+         </script>
         
         <script src="/js/homepage.js"></script>
         <script src="/js/weather.js"></script>
