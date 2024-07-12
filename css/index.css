@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif; /* Ensures consistent typography */
-    background-color: #f4f4f4; /* Light gray background for lighter theme */
+    background-color: lightgray; /* Light gray background for lighter theme */
     color: #333; /* Darker text for better readability */
     line-height: 1.6; /* Improved line spacing for readability */
 }
@@ -357,5 +357,31 @@ a[href^="tel:"]:hover, a[href^="tel:"]:focus {
     .nav-links li {
         margin: 15px 0;
     }
+}
+.delivery-info h2, .delivery-info h3 {
+    color: #00447c; /* Blue color for headers to match your theme */
+    padding: 10px 0; /* Padding for separation */
+}
+
+.delivery-info p {
+    padding: 5px 0; /* Padding for paragraph separation */
+    color: #333; /* Dark grey for readability */
+}
+
+.schedule-details {
+    background: #f8f9fa; /* Light grey background for section differentiation */
+    margin: 10px 0; /* Margin for spacing around sections */
+    padding: 10px; /* Padding inside sections */
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.schedule-details ul {
+    list-style-type: circle; /* Styled list type */
+    margin-left: 20px; /* Indent for list */
+}
+
+.schedule-details ul li {
+    padding: 5px 0; /* Padding for list items */
 }
 
