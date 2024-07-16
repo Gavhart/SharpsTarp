@@ -490,4 +490,29 @@ body::-webkit-scrollbar {
     padding: 1em; /* Padding for the answer text */
 }
 
+.nav-links {
+    display: none; /* Hide the navigation by default */
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links.active {
+    display: block; /* Show the navigation when 'active' class is added */
+}
+
+.hamburger {
+    display: block; /* Always display the hamburger icon */
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; /* Flex display for larger screens */
+    }
+    .hamburger {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+}
+
+
 

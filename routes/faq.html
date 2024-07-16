@@ -122,29 +122,22 @@
         document.addEventListener('DOMContentLoaded', function() {
             var currentYear = new Date().getFullYear();
             document.getElementById('current-year').textContent = currentYear;
-        });
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const wasExpanded = item.classList.contains('expanded');
-                faqItems.forEach(i => i.classList.remove('expanded'));
-                if (!wasExpanded) {
-                    item.classList.add('expanded');
-                }
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
             });
         });
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-         const hamburger = document.getElementById('hamburger');
-         const navLinks = document.getElementById('navLinks');
-     
-         hamburger.addEventListener('click', function() {
-             navLinks.classList.toggle('active');
-         });
-     });
-     </script>
-    
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementsByClassName('nav-links')[0]; // Using getElementsByClassName, ensure you select the correct element
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+        </script>
     <script src="/js/homepage.js"></script>
     <script src="/js/weather.js"></script>
 </body>
