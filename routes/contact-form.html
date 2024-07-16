@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SharpsTarps</title>
     <link rel="icon" type="image/png" href="/images/favicon_io-truck/favicon.ico">
-    <link rel="icon" type="image/png" href="/images/favicon_io/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
@@ -15,8 +14,7 @@
             <h1>We Cover the Trucks That Cover the West</h1>
             <button class="hamburger" id="hamburger">&#9776;</button>
             <nav id="main-nav">
-                <ul class="nav-links" id="navLinks">
-                <ul>
+                <ul class="nav-links">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/routes/about.html">About</a></li>
                     <li><a href="/routes/products.html">Products</a></li>
@@ -36,24 +34,17 @@
         <section id="contact-info">
             <h2>Contact Us</h2>
             <div class="locations">
-                <div class="location">
+                <article class="location">
                     <h3>Grants Pass Oregon</h3>
                     <p><a href="https://www.google.com/maps/dir/?api=1&destination=2741+Highland+Avenue+Grants+Pass+Oregon+97526" target="_blank">2741 Highland Avenue<br>Grants Pass, Oregon 97526</a></p>
                     <p><a href="tel:+1541-476-0832">Call Us: +1 541-476-0832</a></p>
                     <p><strong>Email:</strong> <a href="mailto:bg@sharpstarps.com">bg@sharpstarps.com</a></p>
-                </div>
-                <div class="location">
+                </article>
+                <article class="location">
                     <h3>Vancouver Washington</h3>
                     <p><a href="https://www.google.com/maps/dir/?api=1&destination=6302+NE+131st+Avenue+Vancouver+Washington+98682" target="_blank">6302 NE 131st Avenue<br>Vancouver, Washington 98682</a></p>
                     <p><a href="tel:+1360-944-5123">Call Us: +1 360-944-5123</a></p>
-                </div>
-            </div>
-            <!-- Social Media Links -->
-            <div class="social-media">
-                <h3>Connect with Us on Social Media</h3>
-                <p><a href="https://www.facebook.com/profile.php?id=100068241326704" target="_blank">Facebook</a></p>
-                <p><a href="https://www.instagram.com/YourInstagramHandle" target="_blank">Instagram</a></p>
-                <p><a href="https://m.me/YourFacebookPage" target="_blank">Message Us on Facebook Messenger</a></p>
+                </article>
             </div>
         </section>
     </main>
@@ -64,23 +55,17 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var currentYear = new Date().getFullYear(); // Get the current year
-            document.getElementById('current-year').textContent = currentYear; // Set the text content to the current year
+            var currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-         const hamburger = document.getElementById('hamburger');
-         const navLinks = document.getElementById('navLinks');
- 
-         hamburger.addEventListener('click', function() {
-             navLinks.classList.toggle('active');
-         });
-     });
-     </script>
     
     <script src="/js/homepage.js"></script>
     <script src="/js/weather.js"></script>
-    
 </body>
 </html>

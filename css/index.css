@@ -399,4 +399,95 @@ body::-webkit-scrollbar {
       #003087 100%
     );
   }
+  /* Base styles specific to the contact page */
+.contact-page header {
+    background-color: #0047ab; /* Adjusted color for the header specific to contact page */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.contact-page .header-content img.logo {
+    height: 60px; /* Slightly larger logo for the contact page */
+}
+
+.contact-page nav ul {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-page nav ul li a {
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.contact-page nav ul li a:hover,
+.contact-page nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Contact info styling */
+.contact-page .content-wrapper {
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.contact-page .locations .location {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-page .locations .location h3 {
+    color: #002244;
+}
+
+.contact-page .locations .location p {
+    margin: 5px 0;
+}
+
+.contact-page .locations .location a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-page .locations .location a:hover {
+    text-decoration: underline;
+}
+
+/* Footer specific to the contact page */
+.contact-page footer {
+    background-color: #002244;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.faq-accordion .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 0 1em; /* Padding for the answer text */
+}
+
+.faq-item {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #dddddd;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px; /* Space between items */
+}
+
+/* Style for expanded answer */
+.faq-accordion .expanded .faq-answer {
+    max-height: 9999px; /* Adjust based on content */
+    padding: 1em; /* Padding for the answer text */
+}
+
 

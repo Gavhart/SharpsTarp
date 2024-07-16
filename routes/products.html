@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SharpsTarps</title>
     <link rel="icon" type="image/png" href="/images/favicon_io-truck/favicon.ico">
-    <link rel="icon" type="image/png" href="/images/favicon_io/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
@@ -15,8 +14,7 @@
             <h1>We Cover the Trucks That Cover the West</h1>
             <button class="hamburger" id="hamburger">&#9776;</button>
             <nav id="main-nav">
-                <ul class="nav-links" id="navLinks">
-                <ul>
+                <ul class="nav-links">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/routes/about.html">About</a></li>
                     <li><a href="/routes/products.html" class="active">Products</a></li>
@@ -25,7 +23,7 @@
                     <li><a href="/routes/contact-form.html">Contact Us</a></li>
                     <li><a href="/routes/faq.html">FAQs</a></li>
                 </ul>
-            </nav>
+            </nav>            
         </div>
     </header>
     <div class="weather-info" id="weatherDisplay">
@@ -34,25 +32,61 @@
 
     <main class="product-container">
         <h1>Our Products</h1>
-        <div class="products-grid">
-            <div class="product-item">
-                <img src="/images/product1.jpg" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Product 1 description...</p>
-                <p>Call for price</p>
-                <a href="tel:+15414760832" class="button">Call Us: +1 541-476-0832</a>
+        <section class="product-section">
+            <h2>Flatbed Parts</h2>
+            <div class="products-grid">
+                <!-- List each product here -->
+                <div class="product-item">
+                    <img src="/images/flatbed2.png" alt="Flatbed Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    
+                </div>
+                <!-- Repeat for other flatbed tarps -->
             </div>
-            <div class="product-item">
-                <img src="/images/product2.jpg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Product 2 description...</p>
-                <p>Call for price</p>
-                <a href="tel:+15414760832" class="button">Call Us: +1 541-476-0832</a>
+        </section>
+
+        <section class="product-section">
+            <h2>Roll Tarps Parts</h2>
+            <div class="products-grid">
+                <!-- List each product here -->
+                <div class="product-item">
+                    <img src="/images/roll1.png" alt="Roll Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/roll2.png" alt="Roll Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/roll3.png" alt="Roll Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/roll4.png" alt="Roll Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/roll5.png" alt="Roll Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/roll6.png" alt="Roll Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/roll7.png" alt="Roll Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                </div>
+                <!-- Repeat for other roll tarps -->
             </div>
-            <!-- Repeat for other products -->
-        </div>
+        </section>
+
+        <section class="product-section">
+            <h2>Side Curtain Parts</h2>
+            <div class="products-grid">
+                <!-- List each product here -->
+                <div class="product-item">
+                    <img src="/images/side1.png" alt="Side Curtain" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/side2.png" alt="Side Curtain" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/side3.png" alt="Side Curtain" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                </div>
+                <!-- Repeat for other side curtains -->
+            </div>
+        </section>
+
+        <section class="product-section">
+            <h2>Pull Tarp Parts</h2>
+            <div class="products-grid">
+                <!-- List each product here -->
+                <div class="product-item">
+                    <img src="/images/pull1.jpeg" alt="Pull Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/pull2.png" alt="Pull Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                    <img src="/images/pull3.jpeg" alt="Pull Tarp" onclick="openLightbox(this.src);"style="width: 150px; height: auto;">
+                </div>
+                <!-- Repeat for other pull tarps -->
+            </div>
+        </section>
     </main>
-    
 
     <footer>
         <p>&copy; <span id="current-year"></span> Sharps Tarps All rights reserved.</p>
@@ -60,20 +94,41 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('current-year').textContent = new Date().getFullYear(); // Update the footer year dynamically
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-         const hamburger = document.getElementById('hamburger');
-         const navLinks = document.getElementById('navLinks');
- 
-         hamburger.addEventListener('click', function() {
-             navLinks.classList.toggle('active');
-         });
-     });
-     </script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.querySelector('.nav-links');  // Ensure this selector matches your HTML
 
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active'); // Toggle the .active class on and off
+            });
+        });
+
+        function openLightbox(src) {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.style.position = 'fixed';
+            lightbox.style.top = '0';
+            lightbox.style.left = '0';
+            lightbox.style.width = '100vw';
+            lightbox.style.height = '100vh';
+            lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            lightbox.style.display = 'flex';
+            lightbox.style.justifyContent = 'center';
+            lightbox.style.alignItems = 'center';
+            lightbox.style.zIndex = '1000';
+            lightbox.onclick = function() {
+                document.body.removeChild(this);
+            };
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.style.maxWidth = '90%';
+            img.style.maxHeight = '90%';
+            lightbox.appendChild(img);
+            document.body.appendChild(lightbox);
+        }
+    </script>
     <script src="/js/homepage.js"></script>
     <script src="/js/weather.js"></script>
 </body>

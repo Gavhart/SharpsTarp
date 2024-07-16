@@ -86,6 +86,36 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
     highlightCurrentPage();
+    function openLightbox(src, alt) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.onclick = function() {
+            document.body.removeChild(this);
+        };
+    
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        img.style.maxHeight = '80%'; // Limit the image height to 80% of the viewport
+        img.style.maxWidth = '90%'; // Limit the image width to 90% of the viewport
+    
+        lightbox.appendChild(img);
+        document.body.appendChild(lightbox);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        const faqItems = document.querySelectorAll('.faq-item');
+    
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Toggle 'expanded' class to show or hide the answer
+                const wasExpanded = item.classList.contains('expanded');
+                // Collapse all answers
+                faqItems.forEach(i => i.classList.remove('expanded'));
+                if (!wasExpanded) {
+                    item.classList.add('expanded');
+                }
+            });
+        });
+    });
 });
