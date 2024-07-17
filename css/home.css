@@ -555,46 +555,4 @@ body::-webkit-scrollbar {
     max-width: 90%;
     max-height: 80%;
 }
-/* Hamburger menu button styling */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
 
-/* Navigation links hidden on mobile by default */
-.nav-links {
-    display: flex;
-    list-style: none;
-    transition: all 0.3s ease;
-}
-
-/* Responsive styling for mobile devices */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        position: fixed;
-        background-color: #333;
-        height: 100vh;
-        width: 100%;
-        top: 0;
-        left: -100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-}
