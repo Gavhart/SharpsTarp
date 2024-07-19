@@ -33,7 +33,7 @@
     <main>
         <section id="faq" class="faq-accordion">
             <h2>Frequently Asked Questions (FAQs)</h2>
-
+    
             <div class="faq-item">
                 <h3 class="faq-question">Product Questions</h3>
                 <div class="faq-answer">
@@ -56,7 +56,7 @@
                         <li>A tarpaulin is a large sheet of strong, flexible, water-resistant or waterproof material, often cloth such as canvas or polyester coated with urethane, or made of plastics such as polyethylene.</li>
                         <h3>What is a gusset?</h3>
                         <li>A gusset is a triangular piece of material sewn into the tarpaulin body to allow the tarp to fit over a load that is wider than the tarp. Example: Standard Lumber Tarp (SL18) 8′ drop with 8’x 8′ tail.</li>
-
+    
                     </ul>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <h3 class="faq-question">Customer Service</h3>
                 <div class="faq-answer">
                     <p>You can reach our customer service team by phone at 541-476-0832 or email us at bg@sharpstarps.com.</p>
-
+    
                 </div>
             </div>
             <div class="faq-item">
@@ -128,17 +128,21 @@
             hamburger.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
             });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementsByClassName('nav-links')[0]; // Using getElementsByClassName, ensure you select the correct element
-            hamburger.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
+            // Accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Toggle 'expanded' class to show or hide the answer
+                    const wasExpanded = item.classList.contains('expanded');
+                    // Collapse all answers
+                    faqItems.forEach(i => i.classList.remove('expanded'));
+                    if (!wasExpanded) {
+                        item.classList.add('expanded');
+                    }
+                });
             });
         });
-        </script>
+    </script>
     <script src="/js/homepage.js"></script>
     <script src="/js/weather.js"></script>
     <div id="contactPopup" class="contact-popup" style="display: none;">

@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
+    
 
     // Dynamic navigation highlighting based on scroll position
     const sections = document.querySelectorAll('section');
