@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SharpsTarps</title>
-    <link rel="icon" type="image/png" href="/images/favicon_io-truck/favicon.ico">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/png" href="./favicon_io-truck/favicon.ico">
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="/images/logo.webp" alt="logo" class="logo">
+            <img src="./logo.webp" alt="logo" class="logo">
             <h1>We Cover the Trucks That Cover the West</h1>
             <button class="hamburger" id="hamburger">&#9776;</button>
             <nav id="main-nav">
                 <ul class="nav-links">
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/routes/about.html">About</a></li>
-                    <li><a href="/routes/products.html">Products</a></li>
-                    <li><a href="/routes/locations.html">Locations</a></li>
-                    <li><a href="/routes/testimonials.html">Testimonials</a></li>
-                    <li><a href="/routes/contact-form.html">Contact Us</a></li>
-                    <li><a href="/routes/faq.html">FAQs</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./locations.html">Locations</a></li>
+                    <li><a href="./testimonials.html">Testimonials</a></li>
+                    <li><a href="./contact-form.html">Contact Us</a></li>
+                    <li><a href="./faq.html">FAQs</a></li>
                 </ul>
             </nav>            
         </div>
@@ -121,13 +121,15 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var currentYear = new Date().getFullYear();
-            document.getElementById('current-year').textContent = currentYear;
             const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            hamburger.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
+            const nav = document.getElementById('main-nav'); // Fix: Target the correct ID
+
+hamburger.addEventListener('click', function() {
+    nav.classList.toggle('active'); // Toggle class for visibility
+         });
+     });
+     </script>
+    <script>
             // Accordion functionality
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(item => {
@@ -141,13 +143,12 @@
                     }
                 });
             });
-        });
     </script>
-    <script src="/js/homepage.js"></script>
-    <script src="/js/weather.js"></script>
+    <script src="./homepage.js"></script>
+    <script src="./weather.js"></script>
     <div id="contactPopup" class="contact-popup" style="display: none;">
         <span class="close-btn">&times;</span>
-        <p>Need help or directions? <a href="/routes/contact.html">Contact us!</a></p>
+        <p>Need help or directions? <a href="./contact.html">Contact us!</a></p>
     </div>
 </body>
 </html>
