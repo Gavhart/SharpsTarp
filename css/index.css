@@ -560,5 +560,10 @@ body::-webkit-scrollbar {
 
 }
 
+.slogan {
+    font-family: 'Courier New', Courier, monospace; /* OR any cursive font */
+    font-style: italic;
+}
+
 
 
